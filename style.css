@@ -3,6 +3,7 @@
 body{
     background-color: rgb(184, 25, 19);
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 h2{
     color: white !important;
