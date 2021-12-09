@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    background-color: rgb(184, 25, 19);
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    color: white !important;
+    font-size: 4rem;
+    padding:13rem 0 2rem 0;
+}
+.search-input{
+    position: relative;
+}
+input[type="text"]{
+    margin:0 auto;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 4rem;
+    outline: none;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+input[type="text"]:focus{
+    border: 3px solid rgb(251, 149, 255);
+}
+button.search{
+background: transparent;
+border:none;
+position: absolute;
+top: 0;
+right: 25%;
+width: 55px;
+height: 55px;
+line-height: 55px;
+outline: none;
+cursor: pointer;
+
+}
+i.bx-search-alt-2{
+    font-size:1.2rem;
+}
+#demo{
+    text-align: center;
+    color:white;
+}
+#book-list{
+visibility: hidden;
+}
+#book-list h3{
+    color:white;
+    font-size:3rem;
+}
+.card-img-top{
+    width:100%;
+    height:18vw;
+    object-fit: fill;
+}
+.card{
+    width: 70%;
+}
+.card-body{
+    position:relative;
+}
+.bxs-star{
+    position:absolute;
+    top:12%;
+    right: 2%;
+}
+.error{
+    display:none;
+}
+@media (max-width:600px) {
+    .card-img-top{
+        width:100%;
+        height:50vw;
+        object-fit: fill;
+    }
+    .card{
+        width: 55%;
+    }
+}
