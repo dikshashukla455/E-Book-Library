@@ -1,7 +1,7 @@
 const outputLists = document.getElementById("list-output");
 const bookURL = "https://www.googleapis.com/books/v1/volumes?q=";
 const placeHldr = '<img src="https://via.placeholder.com/150">';
-
+const error = document.getElementById("demo");
 var searchData, item, title, author, publisher, bookLink, BookImg;
 
 document.getElementById("search").addEventListener("click", searchResults);
@@ -18,15 +18,16 @@ function searchResults() {
 			.then((result) => {
 				console.log(result);
 				if (result.totalItems === 0) {
-					const error = document.getElementById("demo");
 					error.innerHTML ="<h5>No results are found. Please try again...</h5>"
-                    setTimeout(() =>{
-						error.classList.add("error");
-					}, 3000);
+					setTimeout(() =>{
+						const showBookList = document.getElementById("book-list");
+						showBookList.style.visibility = "hidden";
+					}, 0);
 					
 				} else {
 					const showBookList = document.getElementById("book-list");
 					showBookList.style.visibility = "visible";
+					error.classList.add("error");
 					displayResults(result);
 				}
 			});
