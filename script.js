@@ -3,7 +3,7 @@ const bookURL = "https://www.googleapis.com/books/v1/volumes?q=";
 const placeHldr = '<img src="https://via.placeholder.com/150">';
 const error = document.getElementById("demo");
 var searchData, item, title, author, publisher, bookLink, BookImg;
-
+document.getElementById("search-box").addEventListener("change", searchResults);
 document.getElementById("search").addEventListener("click", searchResults);
 function searchResults() {
 	outputLists.innerHTML = "";
